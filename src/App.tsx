@@ -25,8 +25,8 @@ function App()
           <Route path="/searchboth" element={<Searchboth />} />
           <Route path="/searchflight" element={<Searchflight />} />
           <Route path="/searchhotel" element={<Searchhotel />} />
-          <Route path="/viewflight/:id" element={<Viewflight />} />
-          <Route path="/viewhotel/:id" element={<Viewhotel />} />
+          <Route path="/viewflight/" element={<Viewflight />} />
+          <Route path="/viewhotel/" element={<Viewhotel />} />
           <Route path="/viewresult" element={<Viewresult />} />
         </Routes>
       </BrowserRouter>
