@@ -28,6 +28,7 @@ function App()
           <Route path="/viewflight/" element={<Viewflight />} />
           <Route path="/viewhotel/" element={<Viewhotel />} />
           <Route path="/viewresult" element={<Viewresult />} />
+          
         </Routes>
       </BrowserRouter>
     </div>
