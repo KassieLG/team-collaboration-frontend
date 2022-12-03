@@ -2,18 +2,21 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
-import { AboutPage } from '../src/components/AboutPage'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function About() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>National Quick Travel</title>
+        <title>National Quick </title>
       </Head>
       
+
       <Header />
-      <AboutPage />
+
+      <Link href="/AboutPage">About Us</Link>
+
       <Footer />
     </div>
   )
