@@ -1,22 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Card } from '../src/components/Card'
 import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
-import { CustomerID } from '../src/components/CustomerID'
+import { OrderConfirm } from '../src/components/OrderConfirm'
 import styles from '../styles/Home.module.css'
 
-export default function customerID() {
+export default function orderConfirm() {
   return (
     <div className={styles.container}>
       <Head>
         <title>National Quick Travel</title>
       </Head>
       <Header />
-      <h1>Enter Your Details</h1>
-       <CustomerID />
-       <td><button className="Confirm"><a href="orderConfirm">Confirm</a></button></td>
-      <Footer />
+      <h1>Your Booking Confirmation</h1>
+    <OrderConfirm />
+  <Footer />
     </div>
   )
 }

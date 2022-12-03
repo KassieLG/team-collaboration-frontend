@@ -284,3 +284,12 @@ footer {
   background-color: rgb(44, 211, 72);
   color: white;
 }
+
+.requiredfield::after {
+  content: "*";
+  color: red;
+}
+
+.bold{ 
+  font-weight: bold; 
+}

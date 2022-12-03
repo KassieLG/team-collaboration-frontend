@@ -20,7 +20,7 @@ export const HotelDetails = () => {
             <img src="/Images/room3.jpg" alt="room3" min-width={500} height={500}/>
             </div>
             <div className="button flex">
-                <button className="primary-btn"><a href="CustomerID">BOOK NOW</a></button>
+                <button className="primary-btn"><a href="customerID">BOOK NOW</a></button>
                 <h3>$200 <span> Per Night </span> </h3>
               </div>
             <div>

@@ -8,7 +8,7 @@ export const BookingRaF = () => {
           <div className="form">
             <form className="grid">
               <input type="text" placeholder="Location"/>
-              <input type="date" placeholder="Araival Date"/>
+              <input type="date" placeholder="Arival Date"/>
               <input type="date" placeholder="Departure Date"/>
               <input type="number" placeholder="Adults"/>
               <input type="number" placeholder="Children"/>
