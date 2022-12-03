@@ -2,18 +2,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
-import { AboutPage } from '../src/components/AboutPage'
+import { Cart } from '../src/components/Cart'
 import styles from '../styles/Home.module.css'
 
-export default function About() {
+export default function cart() {
   return (
     <div className={styles.container}>
       <Head>
         <title>National Quick Travel</title>
       </Head>
-      
       <Header />
-      <AboutPage />
+      <h1>Your Cart Items</h1>
+      <Cart />
       <Footer />
     </div>
   )

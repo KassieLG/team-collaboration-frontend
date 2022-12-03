@@ -2,18 +2,20 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
-import { AboutPage } from '../src/components/AboutPage'
+import { BookingRaF } from '../src/components/BookingRaF'
+import { HotelDetails } from '../src/components/HotelDetails'
 import styles from '../styles/Home.module.css'
 
-export default function About() {
+export default function hotelDetails() {
   return (
     <div className={styles.container}>
       <Head>
         <title>National Quick Travel</title>
       </Head>
-      
+      <h1>Your Flight Information</h1>
       <Header />
-      <AboutPage />
+      <BookingRaF />
+      <HotelDetails />
       <Footer />
     </div>
   )

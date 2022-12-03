@@ -5,7 +5,7 @@ import { Header } from '../src/components/Header'
 import { Card } from '../src/components/Card'
 import styles from '../styles/Home.module.css'
 
-export default function SearchList() {
+export default function searchList() {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +15,8 @@ export default function SearchList() {
       <Header />
 
       <Card />
+
+      <Footer />
     </div>
   )
 }

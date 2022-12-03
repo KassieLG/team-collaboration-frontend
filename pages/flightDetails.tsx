@@ -5,7 +5,7 @@ import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
 import styles from '../styles/Home.module.css'
 
-export default function HomePage() {
+export default function flightDetails() {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +14,7 @@ export default function HomePage() {
       <Header />
       <h1>Your Flight Information</h1>
 
-      <table className="border: 0px solid #282929;" border="0" align="left">
+      <table className="border: 0px solid #282929;" align="left">
 <tbody>
 <tr className="background-color: #282929;">
 <td className="text-align: left;"><span className="background-color: #282929;">Flight number: xxxxxxxxxx</span></td>
@@ -41,6 +41,7 @@ export default function HomePage() {
 </tr>
 </tbody>
 </table>
+<Footer />
     </div>
   )
 }

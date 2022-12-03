@@ -7,13 +7,6 @@ export const Card = () => {
             </div>
             <div className="text">
               <h2>Suporior Rooms</h2>
-              <div className="rate flex">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
               <div className="button flex">
                 <button className="primary-btn">BOOK NOW</button>
                 <h3>$200 <span> Per Night </span> </h3>

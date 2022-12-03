@@ -23,6 +23,9 @@ li {
 
 .content{
   text-align: right;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, 1px 1px 0 white;
 }
 
 .flex{
@@ -33,6 +36,15 @@ li {
   display: flex;
   justify-content: space-between;
 }
+
+.bg{
+  background-image: url('/Images/rome.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  background-position: center;
+  padding-top: 7%;
+  } 
 
 header {
   height: 10vh;
@@ -70,6 +82,8 @@ header i {
 
 header button {
   padding: 13px 15px;
+  margin-left: 5px;
+  background-image: url('/Images/rome.jpg');
 }
 
 header .navlinks span {
@@ -97,6 +111,7 @@ header .navlinks span {
   header ul li a {
     color: white;
   }
+
 
   header i {
     color: white;
@@ -135,7 +150,7 @@ input {
 }
 
 .book {
-  padding: 40px 0;
+  padding: 20px 50px;
   background: #282834;
   color: #fff;
 }
@@ -158,7 +173,7 @@ h1 {
 }
 
 p{
-  padding-top: 100px;
+  padding-top: 0;
 }
 
 .rooms {
@@ -217,4 +232,55 @@ p{
 
 .owl-carousel1 .owl-nav .owl-next {
   right: 0;
+}
+
+.about {
+  margin-top: 10px;
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+image image{
+  size: 500px;
+  min-height: 500px;
+}
+
+footer {
+  margin-top: 10px;
+  padding-bottom: 2%;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(44, 211, 72);
+  color: white;
+}
+
+.table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#cart {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#cart td, #cart th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cart tr:nth-child(even){background-color: #f2f2f2;}
+
+#cart tr:hover {background-color: #ddd;}
+
+#cart th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(44, 211, 72);
+  color: white;
 }

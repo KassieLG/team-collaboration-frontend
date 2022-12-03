@@ -1,5 +1,9 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
+import css from "styled-jsx/css"
+
 export const Header = () => {
     return <>
+    <div className="bg">
     <header>
       <div className="flex_space">
         <div className="logo">
@@ -7,37 +11,21 @@ export const Header = () => {
         </div>
         <div className="content"> 
           <ul id="menulist" className="content">
-            <li><a href="#home">Home</a> </li>
-            <li><a href="#about">About</a> </li>
-            <li><a href="#hotel">Hotel</a> </li>
-            <li><a href="#flights">Flights</a> </li>
-            <li><a href="#contact">contact</a> </li>
-            <li>🔎</li>
+            <li><a href="/">Home</a> </li>
+            <li><a href="about">About</a> </li>
+            <li><a href="hotelDetails">Hotel</a> </li>
+            <li><a href="flightDetails">Flights</a> </li>
+            <li><a href="contact">contact</a> </li>
+            <li><a href="searchList">🔎</a> </li>
             <li> <button>LOGIN</button> </li>
             <li> <button>REGISTER</button> </li>
+            <li> <a href="cart"> <button>Cart 🛒</button></a> </li>
           </ul>
         </div>
       </div>
     </header>
     <div>
     </div>
-  <p><section className="book">
-      <div className="container flex_space">
-          <div className="text">
-            <h1> Book Your Rooms and Flights</h1>
-          </div>
-          <div className="form">
-            <form className="grid">
-              <input type="text" placeholder="Location"/>
-              <input type="date" placeholder="Araival Date"/>
-              <input type="date" placeholder="Departure Date"/>
-              <input type="number" placeholder="Adults"/>
-              <input type="number" placeholder="Children"/>
-              <input type="submit" value="Search"/>
-            </form>
-          </div>
-        </div>
-      </section></p>
-    
+      </div>
     </>
 }

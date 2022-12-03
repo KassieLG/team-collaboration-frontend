@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Card } from '../src/components/Card'
 import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
+import { BookingRaF } from '../src/components/BookingRaF'
 import styles from '../styles/Home.module.css'
 
 export default function HomePage() {
@@ -12,7 +13,9 @@ export default function HomePage() {
         <title>National Quick Travel</title>
       </Head>
       <Header />
-      <img src="/Images/rome.jpg" alt="rome"/>
+      <BookingRaF />
+      <Card />
+      <Footer />
     </div>
   )
 }
