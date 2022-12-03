@@ -5,6 +5,7 @@ import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
 import { BookingRaF } from '../src/components/BookingRaF'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function HomePage() {
   return (

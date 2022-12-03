@@ -5,6 +5,7 @@ import { Header } from '../src/components/Header'
 import { BookingRaF } from '../src/components/BookingRaF'
 import { HotelDetails } from '../src/components/HotelDetails'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function hotelDetails() {
   return (

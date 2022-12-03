@@ -5,6 +5,8 @@ import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
 import { CustomerID } from '../src/components/CustomerID'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+
 
 export default function customerID() {
   return (

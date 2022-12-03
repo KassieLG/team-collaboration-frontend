@@ -11,7 +11,6 @@ export default function About() {
       <Head>
         <title>National Quick </title>
       </Head>
-      
 
       <Header />
 
