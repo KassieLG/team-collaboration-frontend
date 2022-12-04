@@ -14,10 +14,8 @@ export default function HomePage() {
         <title>National Quick Travel</title>
       </Head>
       <Header />
-
-      <Link href="src/components/BookingRaF">BookingRaF</Link>
-      <Link href="src/components/Card">Card</Link>
-
+      <BookingRaF />
+      <Card />
       <Footer />
     </div>
   )

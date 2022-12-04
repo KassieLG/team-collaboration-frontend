@@ -14,7 +14,7 @@ export default function About() {
 
       <Header />
 
-      <Link href="src/component/AboutPage">About Page</Link>
+      <Link href="/AboutPage">About Us</Link>
 
       <Footer />
     </div>

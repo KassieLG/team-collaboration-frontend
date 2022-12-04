@@ -13,13 +13,10 @@ export default function hotelDetails() {
       <Head>
         <title>National Quick Travel</title>
       </Head>
-
       <h1>Your Flight Information</h1>
       <Header />
-
-      <Link href="src/components/BookingRaF">BookingRaF</Link>
-      <Link href="src/components/HotelDetails">Hotel Detail</Link>
-
+      <BookingRaF />
+      <HotelDetails />
       <Footer />
     </div>
   )

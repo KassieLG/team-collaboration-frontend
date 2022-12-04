@@ -13,11 +13,8 @@ export default function orderConfirm() {
         <title>National Quick Travel</title>
       </Head>
       <Header />
-
       <h1>Your Booking Confirmation</h1>
-      <Link href="src/components/OrderConfirm">Order Confirm</Link>
-
-
+    <OrderConfirm />
   <Footer />
     </div>
   )

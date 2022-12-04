@@ -13,11 +13,9 @@ export default function flightDetails() {
         <title>National Quick Travel</title>
       </Head>
       <Header />
-
       <h1>Your Flight Information</h1>
-      <Link href="src/components/FlightInfo">FlightInfo</Link>
 
- 
+  <FlightInfo />
 <Footer />
     </div>
   )

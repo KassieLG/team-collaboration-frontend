@@ -16,9 +16,7 @@ export default function customerID() {
       </Head>
       <Header />
       <h1>Enter Your Details</h1>
-      
-      <Link href="src/components/CustomerID">CustomerID</Link>
-
+       <CustomerID />
        <td><button className="Confirm"><a href="orderConfirm">Confirm</a></button></td>
       <Footer />
     </div>

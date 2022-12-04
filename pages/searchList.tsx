@@ -15,7 +15,7 @@ export default function searchList() {
       
       <Header />
 
-      <Link href="src/components/Card">Card</Link>
+      <Card />
 
       <Footer />
     </div>
