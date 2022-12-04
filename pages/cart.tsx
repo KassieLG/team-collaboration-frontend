@@ -15,8 +15,7 @@ export default function cart() {
 
       <Header />
 
-      <Link href="/AboutPage">About Us</Link>
-
+      
 
       <Footer />
     </div>
