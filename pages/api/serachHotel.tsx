@@ -1,4 +1,5 @@
-export default (req:any, res:any)=>{
+import type { NextApiRequest, NextApiResponse } from "next"
+export default (req:NextApiRequest, res:NextApiResponse)=>{
     res.statusCode=200
     res.setHeader('Content-Type','application/json')
     res.end(JSON.stringify({results:[]}))

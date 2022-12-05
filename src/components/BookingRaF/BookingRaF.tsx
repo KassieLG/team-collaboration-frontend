@@ -1,10 +1,26 @@
-import { useState } from "react"
+import axios from "axios";
+import { FormEventHandler, useState } from "react"
+
+
 
 export const BookingRaF = () => {
   const[location,setLocation]=useState("");
   const[checkin,setCheckin]=useState("");
   const[checkout,setCheckout]=useState("");  
   const[guestnum,setGuestnum]=useState("");
+  
+  const handleSubmitH = (async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const searchString=JSON.stringify({
+      location: location,
+      checkin: checkin,
+      checkout:checkout,
+      guestNum:guestnum
+    })
+    const res = await axios.post('https://localhost:3500/searchHotel',searchString,{headers:{'Content-Type':'application/json'}});
+
+  });
+
 
 
 
@@ -25,7 +41,7 @@ export const BookingRaF = () => {
             <div className="tab-content" id="myTabContent">
             <div className="tab-pane fade show active" id="hotel-search-pane" role="tabpanel" aria-labelledby="HotelSearchTab">
               Hotel Search Pane
-              <form className="mb-3" action="/api/formH" method="post">
+              <form className="mb-3 form" onSubmit={handleSubmitH} method="post">
               <label htmlFor="location" className="form-label" >Location</label>
               <input type="text" id="location" className="formControl"></input>
               <label htmlFor="checkin" className="form-label" >Check In</label>
