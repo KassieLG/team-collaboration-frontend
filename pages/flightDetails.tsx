@@ -14,7 +14,7 @@ export default function flightDetails() {
       <Header />
       <h1>Your Flight Information</h1>
 
-  <FlightInfo />
+  <FlightInfo data={"abc"} />
 <Footer />
     </div>
   )

@@ -1,6 +1,8 @@
+import { useCustomer } from "../CustomerProvider"
 export const CustomerID = () => {
     return (
-      <table id="cart"  >
+<form>      
+<table id="cart"  >
   <tr>
     <td className="requiredfield">First Name </td>
     <td className="requiredfield">Last Name</td>
@@ -18,5 +20,6 @@ export const CustomerID = () => {
     <td><input type="text" placeholder=" "/></td>
   </tr>
 </table>
+</form>
     )
 }
