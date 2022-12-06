@@ -1,0 +1,20 @@
+[
+    {
+        "_id":"123456",
+        "hotel_id": 1234,
+        "description": "A description of a Hotel",
+        "hotel_address": "123 any St, New York, NY, 12345",
+        "hotel_state":"NY",
+        "price": 925,
+        "hotel_name": "Courtyard Marriot"
+    },
+    {
+        "_id":"654321",
+        "hotel_id": 1234,
+        "description": "A description of a Hotel",
+        "hotel_address": "123 any St, New York, NY, 12345",
+        "hotel_state":"NY",
+        "price": 111,
+        "hotel_name": "Four Seasons"
+    }
+]

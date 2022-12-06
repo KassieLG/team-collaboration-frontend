@@ -1,0 +1,20 @@
+[
+    {
+        "_id":"9999",
+        "flight_id":7777,
+        "airline_name": "JetBlue",
+        "from_location": "YYZ, Pearson International, Toronto, ON",
+        "to_location": "SAN, San-Diego-International, San-Diego, CA",
+        "departure_date": "2022-12-15T05:03:46.00Z",
+        "arrival_date": "2022-12-15T10:03:46.000Z"
+    },
+    {
+        "_id":"6666",
+        "flight_id":8888,
+        "airline_name": "JetBlue",
+        "from_location": "YYZ, Pearson International, Toronto, ON",
+        "to_location": "SAN, San-Diego-International, San-Diego, CA",
+        "departure_date": "2022-11-15T05:03:46.00Z",
+        "arrival_date": "2022-11-15T10:03:46.000Z"
+    }       
+]

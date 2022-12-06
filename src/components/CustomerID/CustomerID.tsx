@@ -27,16 +27,16 @@ export const CustomerID = () => {
     <td className="requiredfield">Last Name </td>
   </tr>
   <tr>
-    <td><input type="text" name='first'onChange={(e)=>setFName(e.target.value)}/></td>
-    <td><input type="text" name='last'onChange={(e)=>setLName(e.target.value)}/></td>
+    <td><input type="text" name='first' className="form-control" onChange={(e)=>setFName(e.target.value)}/></td>
+    <td><input type="text" name='last' className="form-control"onChange={(e)=>setLName(e.target.value)}/></td>
   </tr>
   <tr>
     <td className="requiredfield">Email Address</td>
     <td className="requiredfield">Confirm Email Address</td>
   </tr>
   <tr>
-    <td><input type="text" name='emailAdd' onChange={(e)=>setEmail(e.target.value)}/></td>
-    <td><input type="text" name='emailConf'/></td>
+    <td><input type="text" name='emailAdd'className="form-control" onChange={(e)=>setEmail(e.target.value)}/></td>
+    <td><input type="text" name='emailConf' className="form-control"/></td>
   </tr>
 
   <tr>
@@ -44,15 +44,15 @@ export const CustomerID = () => {
     <td className="requiredfield">Phone Number</td>
   </tr>
   <tr>
-    <td><input type="date" placeholder=" " name="DOB" onChange={(e)=>setBirth(e.target.value)}/></td>
-    <td><input type="number" placeholder=" " name="phoneNum" onChange={(e)=>setPhone(Number.parseInt(e.target.value))}/></td>
+    <td><input type="date" placeholder=" " name="DOB" className="form-control" onChange={(e)=>setBirth(e.target.value)}/></td>
+    <td><input type="number" placeholder=" " name="phoneNum" className="form-control" onChange={(e)=>setPhone(Number.parseInt(e.target.value))}/></td>
   </tr>
   <tr>
     <td className="requiredfield">Passport Number</td>
     <td></td>
   </tr>
   <tr>
-    <td><input type="text" name="passportNum"onChange={(e)=>setPassport(e.target.value)}/></td>
+    <td><input type="text" name="passportNum" className="form-control" onChange={(e)=>setPassport(e.target.value)}/></td>
     
   </tr>
 </table>
