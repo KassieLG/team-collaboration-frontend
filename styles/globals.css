@@ -260,6 +260,7 @@ footer {
   margin-top: 10px;
   border-collapse: collapse;
   border: 1px solid black;
+  color:#ddd;
 }
 
 #cart {
