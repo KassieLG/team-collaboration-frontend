@@ -4,6 +4,8 @@ import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
 import { Card } from '../src/components/Card'
 import styles from '../styles/Home.module.css'
+import HotelTable from '../src/hotelTable';
+import FlightTable from '../src/flightTable';
 
 export default function searchList() {
   return (
@@ -11,12 +13,15 @@ export default function searchList() {
       <Head>
         <title>National Quick Travel</title>
       </Head>
-      
       <Header />
 
-      <Card />
+      <h1>Hotel</h1>
+      <HotelTable />
+      <hr/>
+      <h1>Flight</h1>
+      <FlightTable />
 
       <Footer />
     </div>
-  )
+  );
 }

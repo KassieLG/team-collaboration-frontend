@@ -1,0 +1,9 @@
+thead {color:yellowgreen;}
+tbody {color:white;}
+table, th, td {
+ border: 1px solid black;
+ text-align: center;
+}
+td, th{
+ padding: 5px;
+}

@@ -6,7 +6,7 @@ export const Card = () => {
             <div className="image">
             </div>
             <div className="text">
-              <h2>Suporior Rooms</h2>
+              <h2>Superior Rooms</h2>
               <div className="button flex">
                 <button className="primary-btn">BOOK NOW</button>
                 <h3>$200 <span> Per Night </span> </h3>
@@ -30,7 +30,7 @@ export const Card = () => {
             <img src="/Images/room2.jpeg" alt="room2" width={700} height={500}/>
             </div>
             <div className="text">
-              <h2>Suporior Rooms</h2>              
+              <h2>Superior Rooms</h2>              
               <div className="button flex">
                 <button className="primary-btn">BOOK NOW</button>
                 <h3>$110 <span> Per Night </span> </h3>

@@ -7,7 +7,7 @@ export const Header = () => {
     <header>
       <div className="flex_space">
         <div className="logo">
-          <img src="/Images/logo.jpg" alt="logo" />
+          <img src="/Images/logo.jpg" alt="logo" width='150' />
         </div>
         <div className="content"> 
           <ul id="menulist" className="content">
