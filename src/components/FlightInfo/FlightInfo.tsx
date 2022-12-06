@@ -1,8 +1,12 @@
-export const FlightInfo = () => {
+interface Props {
+    data: string;
+  }
+export const FlightInfo = (props:Props) => {
     return (
+
 <table id="cart" >
 <tr>
-<td><span className="bold">Flight number: xxxxxxxxxx</span></td>
+<td><span className="bold">{props.data}</span></td>
 </tr>
 <tr>
 <td className="text-align: left;"><span className="bold">Airline</span></td>
