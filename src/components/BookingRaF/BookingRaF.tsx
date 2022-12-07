@@ -1,4 +1,5 @@
 import axios from "axios";
+import Router from "next/router";
 import { FormEventHandler, useState } from "react"
 
 
@@ -17,9 +18,14 @@ export const BookingRaF = () => {
       checkout:checkout,
       guestNum:guestnum
     })
-    const res = await axios.post('https://localhost:3500/searchHotel',{city:location});
+    
 
-  });
+    Router.push({
+      pathname: '/searchList',
+      query:{location:location}
+    });
+
+    })
 
 
 

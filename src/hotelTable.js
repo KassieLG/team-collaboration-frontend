@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import hotelTestData from '../testData/hotelTestData.json'
 
 
 export default class HotelTable extends React.Component {
+
     constructor(props){
         super(props);
         this.getHeader = this.getHeader.bind(this);
@@ -11,7 +12,7 @@ export default class HotelTable extends React.Component {
         }
         
         getKeys = function(){
-            return Object.keys(hotelTestData[0]);
+            return Object.keys(this.props.data[0]);
         }
         
         getHeader = function(){
@@ -22,15 +23,15 @@ export default class HotelTable extends React.Component {
         }
         
         getRowsData = function(){
-            var items = hotelTestData;
+            var items = this.props.data;
             var keys = this.getKeys();
             return items.map((row, index)=>{
-                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button>Book</button></td></tr>
+                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button></button></td></tr>
             })
         
         }
-        
         render() {
+            if(this.props.data.length>0){
         return (
         <div>
             <table>
@@ -43,7 +44,8 @@ export default class HotelTable extends React.Component {
             </table>
         </div>
         
-        );
+        );}
+        return
         }
        }
        const RenderRow = (props) =>{
