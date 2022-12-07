@@ -16,7 +16,7 @@ export default function HomePage() {
       </Head>
       <Header />
       <BookingRaF />
-      <Card />
+
       <Footer />
     </div>
   )
