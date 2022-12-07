@@ -20,7 +20,7 @@ const hotelContextDefaults: hotelContextType={
 
 const HotelContext=createContext<hotelContextType>(hotelContextDefaults)
 
-export function useCustomer(){
+export function useHotel(){
     return useContext(HotelContext);
 }
 

@@ -16,10 +16,10 @@ export default function searchList() {
       <Header />
 
       <h1>Hotel</h1>
-      <HotelTable />
+      <HotelTable data/>
       <hr/>
-      <h1>Flight</h1>
-      <FlightTable />
+
+     
 
       <Footer />
     </div>
