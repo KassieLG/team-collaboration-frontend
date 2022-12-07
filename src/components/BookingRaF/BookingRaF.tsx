@@ -17,7 +17,7 @@ export const BookingRaF = () => {
       checkout:checkout,
       guestNum:guestnum
     })
-    const res = await axios.post('https://localhost:3500/searchHotel',searchString,{headers:{'Content-Type':'application/json'}});
+    const res = await axios.post('https://localhost:3500/searchHotel',{city:location});
 
   });
 
@@ -43,13 +43,13 @@ export const BookingRaF = () => {
               Hotel Search Pane
               <form className="mb-3 form" onSubmit={handleSubmitH} method="post">
               <label htmlFor="location" className="form-label" >Location</label>
-              <input type="text" id="location" className="formControl"></input>
+              <input type="text" id="location" className="formControl" onChange={(e)=>setLocation(e.target.value)}></input>
               <label htmlFor="checkin" className="form-label" >Check In</label>
-              <input type="date" id="checkin" className="formControl"></input>
+              <input type="date" id="checkin" className="formControl" onChange={(e)=>setCheckin(e.target.value)}></input>
               <label htmlFor="checkout" className="form-label" >Check Out</label>
-              <input type="date" id="checkout" className="formControl light"></input>
+              <input type="date" id="checkout" className="formControl light"onChange={(e)=>setCheckout(e.target.value)}></input>
               <label htmlFor="guestNum" className="form-label" >Number of guests</label>
-              <input type="number" max="4" min="1" id="guestNum" className="formControl light"></input>
+              <input type="number" max="4" min="1" id="guestNum" className="formControl light" onChange={(e)=>setGuestnum(e.target.value)}></input>
               <button type="submit" className="btn btn-primary mb-3">Submit</button>
               </form>
             </div>

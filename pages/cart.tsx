@@ -30,11 +30,9 @@ export default function cart() {
           Flight ID: {order.flightID}
         </li>
         <li>
-          Customer Name: {customer.customerName}
+          Customer Name: {customer.customerFirstName} {customer.customerLastName}
         </li>
-      <li>
-        <button type='button' onClick={()=>customer.setCustomer('George', '123asd', 'george@george.com', '01/01/00', 5551239876)}>change Customer</button>
-      </li>
+      
       </ul>
       
       <Footer />

@@ -1,7 +1,7 @@
 export const Footer = () => {
     return <>
         <footer>
-        <h1>This is Footer</h1>
+        <h6>&copy; 2022 Group 3 - COMP231 - Centennial College </h6>
         </footer>
     </>
 }

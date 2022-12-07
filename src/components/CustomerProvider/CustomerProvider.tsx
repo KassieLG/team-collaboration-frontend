@@ -1,16 +1,18 @@
 import { createContext, useContext, ReactNode, useState} from 'react'
 
 type custContextType={
-    customerName:string,
+    customerFirstName:string,
+    customerLastName:string
     customerPass:string,
     customerEmail:string,
     customerDOB:string,
     customerPhone:number,
-    setCustomer:(name:string, pass:string, email:string, dob:string, phone:number)=>void;
+    setCustomer:(Fname:string, Lname:string, pass:string, email:string, dob:string, phone:number)=>void;
 }
 
 const custContextDefaults: custContextType={
-    customerName:'',
+    customerFirstName:'',
+    customerLastName:'',
     customerPass:'',
     customerEmail:'',
     customerDOB:'',
@@ -28,21 +30,24 @@ type Props ={
     children:ReactNode;
 }
 export function CustomerProvider({children}:Props){
-    const [customerName ,setCustomerName]=useState('');
+    const [customerFirstName ,setCustomerFirstName]=useState('');
+    const [customerLastName ,setCustomerLastName]=useState('');
     const [customerPass ,setCustomerPass]=useState('');
     const [customerEmail ,setCustomerEmail]=useState('');
     const [customerDOB ,setCustomerDOB]=useState('');
     const [customerPhone ,setCustomerPhone]=useState(0);
 
-    const setCustomer=(name:string, pass:string, email:string, dob:string, phone:number)=>{
-        setCustomerName(name);
+    const setCustomer=(fname:string,lName:string, pass:string, email:string, dob:string, phone:number)=>{
+        setCustomerFirstName(fname);
+        setCustomerLastName(lName);
         setCustomerPass(pass);
         setCustomerDOB(dob);
         setCustomerEmail(email);
         setCustomerPhone(phone);
     }
     const value={
-        customerName,
+        customerFirstName,
+        customerLastName,
         customerPass,
         customerEmail,
         customerPhone,

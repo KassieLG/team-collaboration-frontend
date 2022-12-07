@@ -1,3 +1,4 @@
+import { Button } from 'bootstrap';
 import React from 'react'
 import flightTestData from '../testData/flightTestData.json'
 
@@ -17,7 +18,7 @@ export default class FlightTable extends React.Component {
         getHeader = function(){
             var keys = this.getKeys();
             return keys.map((key, index) => {
-                return <th key={key}>{key.toUpperCase()}</th>
+                return <th key={key}>{key.toUpperCase()} </th>
             })
         }
         
@@ -25,7 +26,7 @@ export default class FlightTable extends React.Component {
             var items = flightTestData;
             var keys = this.getKeys();
             return items.map((row, index)=>{
-                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/></tr>
+                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button>Book</button></td></tr>
             })
         
         }

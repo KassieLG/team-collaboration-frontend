@@ -16,7 +16,7 @@ export const CustomerID = () => {
   const customerSubmit=(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    customerObject.setCustomer(fName, passport, email, birth, phone)
+    customerObject.setCustomer(fName,lName, passport, email, birth, phone)
     Router.push('/cart')
   })
     return (
