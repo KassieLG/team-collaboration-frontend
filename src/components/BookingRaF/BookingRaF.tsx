@@ -1,6 +1,6 @@
 import axios from "axios";
 import Router from "next/router";
-import { FormEventHandler, useState } from "react"
+import React, { FormEventHandler, useState } from "react"
 
 
 
@@ -9,6 +9,10 @@ export const BookingRaF = () => {
   const[checkin,setCheckin]=useState("");
   const[checkout,setCheckout]=useState("");  
   const[guestnum,setGuestnum]=useState("");
+
+  const [depart,setDepart]=useState("");
+  const [arrive,setArrive]=useState("");
+  const [depDate,setDepDate]=useState('');
   
   const handleSubmitH = (async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -27,7 +31,20 @@ export const BookingRaF = () => {
 
     })
 
+  const handleSubmitF = (async (e:React.SyntheticEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    const searchString = JSON.stringify({
 
+    })
+    Router.push({
+      pathname:'/searchListFL',
+      query: {
+        depart:depart,
+        arrive:arrive,
+        date:depDate,
+      }
+    })
+  })  
 
 
   return (
@@ -61,13 +78,13 @@ export const BookingRaF = () => {
             </div>
             <div className="tab-pane fade show" id="air-search-pane" role="tabpanel" aria-labelledby="AirSearchTab">
               Airline Search Pane
-              <form className="mb-3">
+              <form className="mb-3" onSubmit={handleSubmitF}>
               <label htmlFor="departCity" className="form-label" >Departing City</label>
-              <input type="text" id="departCity" className="formControl"></input>
+              <input type="text" id="departCity" className="formControl" onChange={(e)=>setDepart(e.target.value)}></input>
               <label htmlFor="destinationCity" className="form-label" >Destination City</label>
-              <input type="text" id="destinationCity" className="formControl"></input>
+              <input type="text" id="destinationCity" className="formControl"onChange={(e)=>setArrive(e.target.value)}></input>
               <label htmlFor="departDate" className="form-label" >Departure Date</label>
-              <input type="date" id="departDate" className="formControl"></input>
+              <input type="date" id="departDate" className="formControl"onChange={(e)=>setDepDate(e.target.value)}></input>
               <label htmlFor="returnDate" className="form-label" >Return Date</label>
               <input type="date" id="returnDate" className="formControl light"></input>
               <label htmlFor="guestNum" className="form-label" >Number of travellers</label>
