@@ -1,6 +1,23 @@
 import React, { useState } from 'react'
 import hotelTestData from '../testData/hotelTestData.json'
 
+{/*handleAddition(row){
+    if(row.hotel_id!=undefined){
+        addHotel(row);
+    }else if(row.flight_id!=undefined){
+        addFlight(row);
+    }
+
+}*/}
+
+const handleAddition=(row)=>{
+    console.log(row);
+    console.log(row.hotel_id)
+    if(row.hotel_id != undefined){
+        console.log("Defined")
+    
+    }
+}
 
 export default class HotelTable extends React.Component {
 
@@ -26,7 +43,7 @@ export default class HotelTable extends React.Component {
             var items = this.props.data;
             var keys = this.getKeys();
             return items.map((row, index)=>{
-                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button type='button'>Select</button></td></tr>
+                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button type='button' onClick={()=>handleAddition(row)}>Select</button></td></tr>
             })
         
         }
@@ -54,4 +71,4 @@ export default class HotelTable extends React.Component {
             })
            }
        
-    
+

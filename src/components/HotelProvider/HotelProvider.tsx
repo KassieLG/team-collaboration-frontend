@@ -3,22 +3,22 @@ import { createContext, useContext, ReactNode, useState} from 'react'
 
 type hotelContextType={
     id:string,
-    hotelID:string,
+    hotelID:number,
     price:number,
     name:string,
-    setHotel:(id:string, hotelID:string, price:string, name:string)=>void;
+    setHotel:(id:string, hotelID:number, price:number, name:string)=>void;
 }
 
 const hotelContextDefaults: hotelContextType={
     id:'',
-    hotelID:'',
+    hotelID:0,
     price:0,
     name:'',
     setHotel:()=>{}
 }
 
 
-const HotelContext=createContext<hotelContextType>(hotelContextDefaults)
+const HotelContext=createContext<hotelContextType>(hotelContextDefaults);
 
 export function useHotel(){
     return useContext(HotelContext);
@@ -29,16 +29,15 @@ type Props ={
 }
 export function HotelProvider({children}:Props){
     const [id ,setID]=useState('');
-    const [hotelID ,sethotID]=useState('');
+    const [hotelID ,sethotID]=useState(0);
     const [price ,setPrice]=useState(0);
     const [name ,setName]=useState('');
 
 
-    const setHotel=(idnum:string, hotid:string, priceSet:string, nameSet:string)=>{
+    const setHotel=(idnum:string, hotid:number, priceSet:number, nameSet:string)=>{
         setID(idnum);
         sethotID(hotid);
-        const newPrice=Number(priceSet)
-        setPrice(newPrice);
+        setPrice(priceSet);
         setName(nameSet);
     }
     const value={
