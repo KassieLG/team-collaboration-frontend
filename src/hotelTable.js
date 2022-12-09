@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import hotelTestData from '../testData/hotelTestData.json'
 import { addFlight, addHotel } from './components/addItems';
+import { useHotel } from './components/HotelProvider';
 {/*handleAddition(row){
     if(row.hotel_id!=undefined){
         addHotel(row);
@@ -59,6 +60,7 @@ export default class HotelTable extends React.Component {
         }
        }
        const RenderRow = (props) =>{
+
         return props.keys.map((key, index)=>{
             return <td key={props.data[key]}>{props.data[key]}</td>
             })

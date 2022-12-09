@@ -33,12 +33,12 @@ type Props ={
     children:ReactNode;
 }
 export function FlightProvider({children}:Props){
-    const [id ,setID]=useState('');
-    const [flightID ,setFlightID]=useState(0);
-    const [price ,setPrice]=useState(0);
-    const [orig ,setOrig]=useState('');
-    const [dest, setDest]=useState('');
-    const [depart, setDepart]=useState('');
+    const [id ,setID]=useState('63657a846c4cffd2cafad750');
+    const [flightID ,setFlightID]=useState(7015);
+    const [price ,setPrice]=useState(990);
+    const [orig ,setOrig]=useState('Dallas-Fort-Worth');
+    const [dest, setDest]=useState('San-Diego');
+    const [depart, setDepart]=useState('2022-12-15 05:03');
 
     const setFlight=(idnum:string, flightid:number, priceSet:number, origSet:string, destination:string, departure:string)=>{
         setID(idnum);

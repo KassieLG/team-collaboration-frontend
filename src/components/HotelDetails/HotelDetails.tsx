@@ -7,8 +7,8 @@ export const HotelDetails = () => {
 
             <div>
               <ul>
-                <li><h2>{hotel.name}</h2> </li>
-                <li>{hotel.price} </li>                
+                <li><h2> Hotel: {hotel.name}</h2> </li>
+                <li>Price: ${hotel.price} </li>                
           </ul>
             </div>
 

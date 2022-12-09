@@ -28,10 +28,10 @@ type Props ={
     children:ReactNode;
 }
 export function HotelProvider({children}:Props){
-    const [id ,setID]=useState('');
-    const [hotelID ,sethotID]=useState(0);
-    const [price ,setPrice]=useState(0);
-    const [name ,setName]=useState('');
+    const [id ,setID]=useState('636582b16c4cffd2cafad76e');
+    const [hotelID ,sethotID]=useState(4000);
+    const [price ,setPrice]=useState(199);
+    const [name ,setName]=useState('Marriott');
 
 
     const setHotel=(idnum:string, hotid:number, priceSet:number, nameSet:string)=>{

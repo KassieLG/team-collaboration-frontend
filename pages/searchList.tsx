@@ -17,7 +17,7 @@ export default function searchList() {
     const search=getResults();
     const [searchResults, setSearchResults]=useState([]);
     const [loading,setLoading]=useState(true);
-    const [queryValue,setQueryValue]=useState(JSON.stringify(location));
+
     function refresh(){
        
         console.log("The query:")

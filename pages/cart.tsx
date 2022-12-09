@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css'
 import { useCustomer } from '../src/components/CustomerProvider'
 import { HotelDetails } from '../src/components/HotelDetails'
 import { FlightDetails } from '../src/components/FlightDetails'
+import { CustomerDetails } from '../src/components/CustomerDetails'
 
 
 
@@ -31,7 +32,7 @@ export default function cart() {
           <FlightDetails/>
         </li>
         <li>
-           Name: {customer.customerFirstName} {customer.customerLastName}
+          <CustomerDetails/>
         </li>
       
       </ul>
