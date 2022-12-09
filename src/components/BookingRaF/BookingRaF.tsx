@@ -1,5 +1,6 @@
 import axios from "axios";
-import { FormEventHandler, useState } from "react"
+import Router from "next/router";
+import React, { FormEventHandler, useState } from "react"
 
 
 
@@ -8,6 +9,10 @@ export const BookingRaF = () => {
   const[checkin,setCheckin]=useState("");
   const[checkout,setCheckout]=useState("");  
   const[guestnum,setGuestnum]=useState("");
+
+  const [depart,setDepart]=useState("");
+  const [arrive,setArrive]=useState("");
+  const [depDate,setDepDate]=useState('');
   
   const handleSubmitH = (async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -17,11 +22,29 @@ export const BookingRaF = () => {
       checkout:checkout,
       guestNum:guestnum
     })
-    const res = await axios.post('https://localhost:3500/searchHotel',searchString,{headers:{'Content-Type':'application/json'}});
+    
 
-  });
+    Router.push({
+      pathname: '/searchList',
+      query:{location:location}
+    });
 
+    })
 
+  const handleSubmitF = (async (e:React.SyntheticEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    const searchString = JSON.stringify({
+
+    })
+    Router.push({
+      pathname:'/searchListFL',
+      query: {
+        depart:depart,
+        arrive:arrive,
+        date:depDate,
+      }
+    })
+  })  
 
 
   return (
@@ -43,25 +66,25 @@ export const BookingRaF = () => {
               Hotel Search Pane
               <form className="mb-3 form" onSubmit={handleSubmitH} method="post">
               <label htmlFor="location" className="form-label" >Location</label>
-              <input type="text" id="location" className="formControl"></input>
+              <input type="text" id="location" className="formControl" onChange={(e)=>setLocation(e.target.value)}></input>
               <label htmlFor="checkin" className="form-label" >Check In</label>
-              <input type="date" id="checkin" className="formControl"></input>
+              <input type="date" id="checkin" className="formControl" onChange={(e)=>setCheckin(e.target.value)}></input>
               <label htmlFor="checkout" className="form-label" >Check Out</label>
-              <input type="date" id="checkout" className="formControl light"></input>
+              <input type="date" id="checkout" className="formControl light"onChange={(e)=>setCheckout(e.target.value)}></input>
               <label htmlFor="guestNum" className="form-label" >Number of guests</label>
-              <input type="number" max="4" min="1" id="guestNum" className="formControl light"></input>
+              <input type="number" max="4" min="1" id="guestNum" className="formControl light" onChange={(e)=>setGuestnum(e.target.value)}></input>
               <button type="submit" className="btn btn-primary mb-3">Submit</button>
               </form>
             </div>
             <div className="tab-pane fade show" id="air-search-pane" role="tabpanel" aria-labelledby="AirSearchTab">
               Airline Search Pane
-              <form className="mb-3">
+              <form className="mb-3" onSubmit={handleSubmitF}>
               <label htmlFor="departCity" className="form-label" >Departing City</label>
-              <input type="text" id="departCity" className="formControl"></input>
+              <input type="text" id="departCity" className="formControl" onChange={(e)=>setDepart(e.target.value)}></input>
               <label htmlFor="destinationCity" className="form-label" >Destination City</label>
-              <input type="text" id="destinationCity" className="formControl"></input>
+              <input type="text" id="destinationCity" className="formControl"onChange={(e)=>setArrive(e.target.value)}></input>
               <label htmlFor="departDate" className="form-label" >Departure Date</label>
-              <input type="date" id="departDate" className="formControl"></input>
+              <input type="date" id="departDate" className="formControl"onChange={(e)=>setDepDate(e.target.value)}></input>
               <label htmlFor="returnDate" className="form-label" >Return Date</label>
               <input type="date" id="returnDate" className="formControl light"></input>
               <label htmlFor="guestNum" className="form-label" >Number of travellers</label>

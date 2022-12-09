@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 export default function searchList() {
     const router = useRouter()
-    const {location} = router.query
+    const {depart, arrive, date} = router.query
     const search=getResults();
     const [searchResults, setSearchResults]=useState([]);
     const [loading,setLoading]=useState(true);
@@ -22,7 +22,7 @@ export default function searchList() {
        
         console.log("The query:")
         console.log(location)
-        axios.post('http://localhost:3500/search-hotels', {city:  location}).then(res=>{
+        axios.post('http://localhost:3500/search-flights', {date: date, from:depart, to:arrive}).then(res=>{
             setSearchResults(res.data);
             setLoading(false);
         })
@@ -49,10 +49,11 @@ export default function searchList() {
         </Head>
         <Header />
   
-        <h1>Hotel</h1>
+        <h1>Flight</h1>
         <HotelTable data={searchResults}></HotelTable>
         <hr/>
 
+        <p></p>
 
   
         <Footer />

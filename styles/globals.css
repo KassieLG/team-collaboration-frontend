@@ -83,7 +83,7 @@ header i {
 header button {
   padding: 13px 15px;
   margin-left: 5px;
-  background-image: url('/Images/rome.jpg');
+
 }
 
 header .navlinks span {
@@ -252,7 +252,7 @@ footer {
   padding-bottom: 2%;
   text-align: center;
   padding: 3px;
-  background-color: rgb(44, 211, 72);
+  background-color: rgb(3, 0, 26);
   color: white;
 }
 
@@ -274,7 +274,8 @@ footer {
   padding: 8px;
 }
 
-#cart tr:nth-child(even){background-color: #f2f2f2;}
+#cart tr:nth-child(even){background-color: #f2f2f2;
+color: #000;}
 
 #cart tr:hover {background-color: #ddd;}
 

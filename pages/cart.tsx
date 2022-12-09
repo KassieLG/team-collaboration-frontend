@@ -2,18 +2,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Footer } from '../src/components/Footer'
 import { Header } from '../src/components/Header'
-import { Cart } from '../src/components/Cart'
 import styles from '../styles/Home.module.css'
-import { useOrder } from '../src/components/OrderProvider'
 import { useCustomer } from '../src/components/CustomerProvider'
+import { HotelDetails } from '../src/components/HotelDetails'
+import { FlightDetails } from '../src/components/FlightDetails'
+import { CustomerDetails } from '../src/components/CustomerDetails'
+
 
 
 export default function cart() {
   
-  const d = new Date(0);
+  const customer = useCustomer();  
 
-  const order=useOrder();
-  const customer =useCustomer();
+
   return (
     
     <div className={styles.container}>
@@ -22,21 +23,20 @@ export default function cart() {
       </Head>
       <Header />
       <h1>Your Cart Items</h1>
+      <fieldset>
       <ul>
         <li>
-          Hotel Name: {order.hotelName}
+          <HotelDetails/>
         </li>
         <li>
-          Flight ID: {order.flightID}
+          <FlightDetails/>
         </li>
         <li>
-          Customer Name: {customer.customerName}
+          <CustomerDetails/>
         </li>
-      <li>
-        <button type='button' onClick={()=>customer.setCustomer('George', '123asd', 'george@george.com', '01/01/00', 5551239876)}>change Customer</button>
-      </li>
-      </ul>
       
+      </ul>
+      </fieldset>
       <Footer />
     </div>
   )

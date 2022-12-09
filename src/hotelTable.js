@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import hotelTestData from '../testData/hotelTestData.json'
+import { addFlight, addHotel } from './components/addItems';
+import { useHotel } from './components/HotelProvider';
+{/*handleAddition(row){
+    if(row.hotel_id!=undefined){
+        addHotel(row);
+    }else if(row.flight_id!=undefined){
+        addFlight(row);
+    }
+
+}*/}
+
 
 
 export default class HotelTable extends React.Component {
+
     constructor(props){
         super(props);
         this.getHeader = this.getHeader.bind(this);
@@ -11,7 +23,7 @@ export default class HotelTable extends React.Component {
         }
         
         getKeys = function(){
-            return Object.keys(hotelTestData[0]);
+            return Object.keys(this.props.data[0]);
         }
         
         getHeader = function(){
@@ -22,15 +34,15 @@ export default class HotelTable extends React.Component {
         }
         
         getRowsData = function(){
-            var items = hotelTestData;
+            var items = this.props.data;
             var keys = this.getKeys();
             return items.map((row, index)=>{
-                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/></tr>
+                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button type='button' className='btn btn-primary' disabled onClick={()=>handleAddition(row)}>Select</button></td></tr>
             })
         
         }
-        
         render() {
+            if(this.props.data.length>0){
         return (
         <div>
             <table>
@@ -43,13 +55,26 @@ export default class HotelTable extends React.Component {
             </table>
         </div>
         
-        );
+        );}
+        return
         }
        }
        const RenderRow = (props) =>{
+
         return props.keys.map((key, index)=>{
             return <td key={props.data[key]}>{props.data[key]}</td>
             })
            }
        
-    
+           const handleAddition=(row)=>{
+            console.log(row);
+            console.log(row.flight_id)
+            if(row.hotel_id != undefined){
+                console.log("Hotel")
+                addHotel(row);
+            }
+            if(row.flight_id != undefined){
+                console.log("Flight")
+                addFlight(row)
+            }
+        }
