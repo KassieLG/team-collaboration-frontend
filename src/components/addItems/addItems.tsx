@@ -1,3 +1,4 @@
+import { useFlight } from "../FlightProvider"
 import { useHotel } from "../HotelProvider"
 
 type hotelData={
@@ -10,8 +11,23 @@ type hotelData={
     reviews:string,
     amenities:string
 }
-const hotel =useHotel();
+type flightData={
+    _id:string,
+    flight_id:number,
+    airline_name:string,
+    from_location:string,
+    to_location: string,
+    departure_date:string,
+    arrival_date:string,
+    duration:number,
+    total_seats:number,
+    available_seats:number,
+    price:number
+}
+
+
 export const addHotel =(row:hotelData)=>{
+    const hotel =useHotel();
     hotel.setHotel(row._id, row.hotel_id, row.price, row.hotel_address)
     
     return(
@@ -28,4 +44,8 @@ export const addHotel =(row:hotelData)=>{
       </div>
         
     )
+}
+export const addFlight=(row:flightData)=>{
+    const flight = useFlight();
+    flight.setFlight(row._id, row.flight_id, row.price, row.from_location, row.to_location, row.departure_date)
 }

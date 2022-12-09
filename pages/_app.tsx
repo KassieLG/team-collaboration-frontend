@@ -10,18 +10,21 @@ import { FlightProvider } from "../src/components/FlightProvider";
 
 
 
+
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
   return (
+
   <FlightProvider>
   <HotelProvider>
   <CustomerProvider>
     <Component {...pageProps} />
   </CustomerProvider>
   </HotelProvider>
-  </FlightProvider>)
+  </FlightProvider>
+  )
    
 }

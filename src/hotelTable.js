@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import hotelTestData from '../testData/hotelTestData.json'
-
+import { addFlight, addHotel } from './components/addItems';
 {/*handleAddition(row){
     if(row.hotel_id!=undefined){
         addHotel(row);
@@ -10,14 +10,7 @@ import hotelTestData from '../testData/hotelTestData.json'
 
 }*/}
 
-const handleAddition=(row)=>{
-    console.log(row);
-    console.log(row.hotel_id)
-    if(row.hotel_id != undefined){
-        console.log("Defined")
-    
-    }
-}
+
 
 export default class HotelTable extends React.Component {
 
@@ -71,4 +64,15 @@ export default class HotelTable extends React.Component {
             })
            }
        
-
+           const handleAddition=(row)=>{
+            console.log(row);
+            console.log(row.flight_id)
+            if(row.hotel_id != undefined){
+                console.log("Hotel")
+                addHotel(row);
+            }
+            if(row.flight_id != undefined){
+                console.log("Flight")
+                addFlight(row)
+            }
+        }
