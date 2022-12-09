@@ -52,8 +52,7 @@ export default function searchList() {
         <h1>Hotel</h1>
         <HotelTable data={searchResults}></HotelTable>
         <hr/>
-        <h2>Router: {JSON.stringify(location)}</h2>
-        <p></p>
+
 
   
         <Footer />

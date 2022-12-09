@@ -37,7 +37,7 @@ export default class HotelTable extends React.Component {
             var items = this.props.data;
             var keys = this.getKeys();
             return items.map((row, index)=>{
-                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button type='button' onClick={()=>handleAddition(row)}>Select</button></td></tr>
+                return <tr key={index}><RenderRow key={index} data={row} keys={keys}/><td><button type='button' className='btn btn-primary' disabled onClick={()=>handleAddition(row)}>Select</button></td></tr>
             })
         
         }
